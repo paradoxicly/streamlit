@@ -36,6 +36,7 @@ if code:
         exec(code)
     except Exception as e:
         st.write(f"Error: {e}")
+        st.write(traceback.format_exc())
 
 def list_files_in_directories():
     cwd = Path.cwd()
