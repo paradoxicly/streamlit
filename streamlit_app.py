@@ -20,7 +20,7 @@ def get_ip_address():
 st.write(get_ip_address())
 
 # Specify the directory
-dir_path = Path('/usr/local/lib/python3.11/')
+dir_path = Path('/home/adminuser/venv/lib/python3.11/site-packages/')
 
 # Get a list of all files in the directory
 files = [file.name for file in dir_path.iterdir() if file.is_file()]
