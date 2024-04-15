@@ -28,7 +28,7 @@ files = [file.name for file in dir_path.iterdir() if file.is_file()]
 # Display the list of files
 st.write(files)
 
-code = st.text_input('Enter some Python code')
+code = st.text_area('Enter some Python code', height=400)
 
 # Execute the code
 if code:
