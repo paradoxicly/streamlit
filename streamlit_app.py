@@ -15,3 +15,8 @@ list_files_in_directories()
 import sys
 
 st.write(sys.executable)
+
+import streamlit as st
+import pandas as pd
+
+st.write(st.__file__, pd.__file__)
