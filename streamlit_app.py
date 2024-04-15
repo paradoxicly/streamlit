@@ -19,6 +19,15 @@ def get_ip_address():
 
 st.write(get_ip_address())
 
+# Specify the directory
+dir_path = Path('/usr/local/lib/python3.11/')
+
+# Get a list of all files in the directory
+files = [file.name for file in dir_path.iterdir() if file.is_file()]
+
+# Display the list of files
+st.write(files)
+
 def list_files_in_directories():
     cwd = Path.cwd()
     directories = [cwd] + list(cwd.parents)
