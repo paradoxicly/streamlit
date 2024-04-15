@@ -29,3 +29,21 @@ import os
 
 container_id = os.getenv('HOSTNAME')
 st.write(container_id)
+
+import socket
+
+
+def get_ip_address():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        # doesn't even have to be reachable
+        s.connect(("10.255.255.255", 1))
+        IP = s.getsockname()[0]
+    except Exception as e:
+        IP = e
+    finally:
+        s.close()
+    return IP
+
+
+st.write(get_ip_address())
