@@ -2,9 +2,6 @@ import pandas as pd
 from pathlib import Path
 import streamlit as st
 
-with open("/entrypoint") as fh:
-    st.write(fh.readlines())
-
 import socket
 
 def get_ip_address():
