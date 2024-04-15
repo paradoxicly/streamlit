@@ -20,3 +20,7 @@ import streamlit as st
 import pandas as pd
 
 st.write(st.__file__, pd.__file__)
+
+import traceback
+
+st.write(traceback.format_stack())
