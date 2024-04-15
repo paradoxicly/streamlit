@@ -11,3 +11,7 @@ def list_files_in_directories():
         st.write(f'Files in {directory}:', df)
 
 list_files_in_directories()
+
+import sys
+
+st.write(sys.executable)
