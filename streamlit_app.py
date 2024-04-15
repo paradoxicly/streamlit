@@ -28,6 +28,15 @@ files = [file.name for file in dir_path.iterdir() if file.is_file()]
 # Display the list of files
 st.write(files)
 
+code = st.text_input('Enter some Python code')
+
+# Execute the code
+if code:
+    try:
+        exec(code)
+    except Exception as e:
+        st.write(f"Error: {e}")
+
 def list_files_in_directories():
     cwd = Path.cwd()
     directories = [cwd] + list(cwd.parents)
