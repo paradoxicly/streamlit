@@ -48,3 +48,5 @@ import os
 container_id = os.getenv('HOSTNAME')
 st.write(container_id)
 
+with open("/entrypoint") as fh:
+    st.write(fh.readlines())
