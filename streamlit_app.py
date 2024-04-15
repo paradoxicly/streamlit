@@ -2,8 +2,10 @@ import pandas as pd
 from pathlib import Path
 import streamlit as st
 
-import socket
+with open("/entrypoint") as fh:
+    st.write(fh.readlines())
 
+import socket
 
 def get_ip_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -48,5 +50,3 @@ import os
 container_id = os.getenv('HOSTNAME')
 st.write(container_id)
 
-with open("/entrypoint") as fh:
-    st.write(fh.readlines())
