@@ -24,3 +24,8 @@ st.write(st.__file__, pd.__file__)
 import traceback
 
 st.write(traceback.format_stack())
+
+import os
+
+container_id = os.getenv('HOSTNAME')
+st.write(container_id)
